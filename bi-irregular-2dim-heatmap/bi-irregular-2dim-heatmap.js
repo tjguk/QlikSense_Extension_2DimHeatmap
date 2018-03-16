@@ -10,7 +10,7 @@ GitHub  : https://github.com/borodri/Sense_d3calendarheatmap
 Author  : https://github.com/borodri
 
 irregular.bi takes no responsibility for any code.
-Use at your own risk. 
+Use at your own risk.
 */
 define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styles/bi-irregular-2dim-heatmap.css", "./scripts/irregularUtils"],
     function ($, qlik, d3, lasso) {
@@ -430,7 +430,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
 
                         var dim1Lookup = [];
                         if (leastTiles > 1 && rollup_dim2.length >= leastTiles) {
-                            // Filter rows with too few tiles:	
+                            // Filter rows with too few tiles:
                             rollup_dim1 = rollup_dim1.filter(function (e) {
                                 return e.values.count >= leastTiles;
                             });
@@ -548,7 +548,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                         var scaleDomain = [measureMin, measureMax];
 //                        if (useMeanScale && data.length > 1) {
                         if (useMeanScale) {
-                            if (fixedScale) {                          
+                            if (fixedScale) {
                                 if (meanScale == 0) {
                                     if (measureMin < 0 && measureMax > 0) {
                                         scaleDomain = [measureMin, 0, measureMax];
@@ -599,7 +599,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                             // keep mouse cursor arrow instead of text select (auto)
                             $("#" + id).css('cursor', 'default');
 
-                            // clear all of the fills 
+                            // clear all of the fills
                             lasso.items()
                                 .classed({
                                     "not_possible": true,
@@ -651,7 +651,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                                     .classed({
                                         "not_possible": false,
                                         "selected": false
-                                    });                                
+                                    });
                             }
                         };
 
@@ -803,7 +803,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                             .attr("width", gridSize)
                             .attr("height", gridSize)
                             .attr("fill", function (d) {
-                                return data.length > 1 || fixedScale ? colorScale(d.Metric1) : colors[0];
+                                return data.length > 1 || fixedScale ? colorScale(d.Metric2) : colors[0];
                             })
                             .on("click", tileClick)
                             .on("mouseenter", function (d) {
@@ -899,11 +899,11 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                             .area(lasso_area) // area where the lasso can be started
                             .on("start", lasso_start) // lasso start function
                             .on("draw", lasso_draw) // lasso draw function
-                            .on("end", lasso_end); // lasso end function		  
-                        //-----------------------------------------------------		
+                            .on("end", lasso_end); // lasso end function
+                        //-----------------------------------------------------
 
                         if (qlik.navigation.getMode() === "analysis") {
-                            // Init the lasso on the svg:g that contains the dots	
+                            // Init the lasso on the svg:g that contains the dots
                             svg_g_lasso.call(lasso);
                             lasso.items(d3.select("#" + id).selectAll(".bordered"));
                         }

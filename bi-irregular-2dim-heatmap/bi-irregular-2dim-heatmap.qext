@@ -1,8 +1,8 @@
 {
-    "name": "2 Dimensional Heatmap",
-    "description": "2 Dimensional Heatmap",
+    "name": "Tim Dimensional Heatmap",
+    "description": "Tim Dimensional Heatmap",
     "icon": "extension",
     "type": "visualization",
-    "version": "1.0",
-    "author": "brz, rabe"
+    "version": "1.1",
+    "author": "brz, rabe, tjguk"
 }
