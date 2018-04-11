@@ -1,4 +1,4 @@
-/*
+﻿/*
 Created by Ralf Becher - ralf.becher@web.de - (c) 2015 irregular.bi, Leipzig, Germany
 Tested on Qlik Sense 2.2.4
 Modified by Loïc Formont and Xavier Le Pitre
@@ -102,7 +102,7 @@ define(["jquery", "qlik", "./scripts/d3.min", "./scripts/lasso_adj", "css!./styl
                                                 value: "#ffffd9, #edf8b1, #c7e9b4, #7fcdbb, #41b6c4, #1d91c0, #225ea8, #253494, #081d58",
                                                 label: "YlGnBu"
 										}, {
-                                                value: "#800026, #bd0026, #e31a1c, #fc4e2a, #fd8d3c, #fd8d3c, #feb24c, #fed976, #ffeda0, #ffffcc",
+                                                value: "#800026, #800026, #800026, #edae07, #edae07, #edae07, #1e8c31, #1e8c31, #1e8c31",
                                                 label: "EMUK Digital"
 										}
 									],
